@@ -1,8 +1,8 @@
 require "./app"
 
 configure do
-  # GitHub pages deployment
-  set(:public_folder, "./")
+  # Set public folder for static assets
+  set(:public_folder, File.join(File.dirname(__FILE__), '..', 'public'))
 
   # To open .html.erb files, need to register them
   Tilt.register(Tilt::ERBTemplate, "html.erb")

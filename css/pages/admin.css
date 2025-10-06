@@ -1,0 +1,346 @@
+/* Admin Dashboard Styles */
+
+/* Admin Login Page */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.login-box {
+  background-color: white;
+  padding: var(--spacing-xl);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  text-align: center;
+  font-family: var(--header-font);
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Admin Layout */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-lg);
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.admin-sidebar h2 {
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--header-font);
+}
+
+.admin-menu {
+  list-style: none;
+}
+
+.admin-menu li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.admin-menu a {
+  display: block;
+  padding: var(--spacing-sm);
+  color: white;
+  border-radius: 4px;
+  transition: background-color var(--transition-speed);
+}
+
+.admin-menu a:hover,
+.admin-menu a.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: var(--spacing-xl);
+  background-color: var(--background-alt);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  background-color: white;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-title {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* Admin Cards */
+.admin-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.admin-card-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Admin Tables */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.admin-table th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-md);
+  text-align: left;
+  font-weight: 600;
+}
+
+.admin-table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table tr:hover {
+  background-color: var(--background-alt);
+}
+
+.admin-table .actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.admin-table .btn-small {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Editor Styles */
+.editor-container {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  min-height: 300px;
+}
+
+.editor-toolbar {
+  background-color: var(--background-alt);
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+.editor-button {
+  padding: 0.5rem;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+.editor-button:hover {
+  background-color: var(--background-alt);
+}
+
+.editor-content {
+  padding: var(--spacing-md);
+  min-height: 250px;
+  outline: none;
+}
+
+/* Theme Customizer */
+.color-picker-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.color-picker input[type="color"] {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Stats Dashboard */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.stat-box {
+  background-color: white;
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-family: var(--header-font);
+}
+
+.stat-label {
+  color: var(--text-light);
+  margin-top: var(--spacing-sm);
+}
+
+/* Image Manager */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.image-item {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform var(--transition-speed);
+}
+
+.image-item:hover {
+  transform: scale(1.05);
+}
+
+.image-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+}
+
+.image-item:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: white;
+  padding: var(--spacing-xl);
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.modal-close {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.modal-close:hover {
+  color: var(--text-color);
+}
+
+/* Responsive Admin */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .admin-content {
+    margin-left: 0;
+  }
+  
+  .admin-layout {
+    flex-direction: column;
+  }
+}

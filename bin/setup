@@ -1,5 +1,17 @@
 #!/usr/bin/env ruby
 
 puts "== Installing dependencies =="
-`bundle install`
+system("bundle install")
+
+puts "\n== Setting up database =="
+system("bundle exec rake db:create")
+system("bundle exec rake db:migrate")
+system("bundle exec rake db:seed")
+
 puts "\n== Initial setup complete =="
+puts "\nTo start the server, run:"
+puts "  bundle exec rackup --port=3000"
+puts "\nThen visit:"
+puts "  Public site: http://localhost:3000"
+puts "  Admin panel: http://localhost:3000/admin/login"
+puts "  Credentials: admin / admin123"

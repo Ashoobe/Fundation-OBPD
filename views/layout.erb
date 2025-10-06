@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= @page_title || 'Oak Brook Park District Foundation' %></title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="/css/global/reset.css">
+  <link rel="stylesheet" href="/css/global/variables.css">
+  <link rel="stylesheet" href="/css/global/layout.css">
+  <link rel="stylesheet" href="/css/global/components.css">
+  <link rel="stylesheet" href="/css/pages/home.css">
+  <link rel="stylesheet" href="/css/pages/news.css">
+  <link rel="stylesheet" href="/css/pages/contact.css">
+  <link rel="stylesheet" href="/css/responsive/tablet.css">
+  <link rel="stylesheet" href="/css/responsive/mobile.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="site-logo">Oak Brook Park District Foundation</a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <nav>
+          <ul>
+            <% @menu_items.each do |item| %>
+              <li class="<%= item.children.any? ? 'dropdown' : '' %>">
+                <a href="<%= item.link %>"><%= item.title %></a>
+                <% if item.children.any? %>
+                  <div class="dropdown-content">
+                    <% item.children.order(:position).each do |child| %>
+                      <a href="<%= child.link %>"><%= child.title %></a>
+                    <% end %>
+                  </div>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <%= yield %>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Supporting our community through exceptional parks and recreation programs.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul style="list-style: none;">
+            <li><a href="/">Home</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/page/projects">Projects</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Oak Brook Park District Foundation</p>
+          <p>Email: info@obpdfoundation.org</p>
+          <p>Phone: (630) 555-1234</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <%= Time.now.year %> Oak Brook Park District Foundation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

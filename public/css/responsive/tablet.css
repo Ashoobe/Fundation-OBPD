@@ -1,0 +1,33 @@
+/* Tablet Styles - 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Container */
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  /* Navigation */
+  nav ul {
+    gap: var(--spacing-sm);
+  }
+  
+  nav a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Grid System */
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Typography */
+  .section-title {
+    font-size: 2.25rem;
+  }
+  
+  /* Cards */
+  .card-image {
+    height: 180px;
+  }
+}
