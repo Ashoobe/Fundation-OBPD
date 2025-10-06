@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Oak Brook Park District Foundation</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="/css/global/reset.css">
+  <link rel="stylesheet" href="/css/global/variables.css">
+  <link rel="stylesheet" href="/css/global/components.css">
+  <link rel="stylesheet" href="/css/pages/admin.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="admin-sidebar">
+      <h2>OBPD Foundation</h2>
+      <ul class="admin-menu">
+        <li><a href="#dashboard" class="active">Dashboard</a></li>
+        <li><a href="#pages">Pages</a></li>
+        <li><a href="#menus">Menus</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#users">Users</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#theme">Theme</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+      <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2);">
+        <a href="/" target="_blank" style="display: block; margin-bottom: 0.5rem;">View Site</a>
+        <a href="/admin/logout">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="admin-content">
+      <div id="admin-main-content">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="/js/main.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

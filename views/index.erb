@@ -1,0 +1,93 @@
+<!-- Home Page -->
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Oak Brook Park District Foundation</h1>
+    <p>Supporting our community through exceptional parks, facilities, and programs</p>
+    <a href="/page/ways-to-give-back" class="btn btn-donate">Support Our Mission</a>
+  </div>
+</section>
+
+<!-- Featured Content -->
+<section class="featured-section">
+  <div class="container">
+    <div class="featured-content">
+      <div class="featured-image-container">
+        <img src="/images/park-placeholder.jpg" alt="Oak Brook Park" class="featured-image" style="background-color: #e0e0e0; min-height: 300px;">
+      </div>
+      <div class="featured-text">
+        <h2>Making a Difference in Our Community</h2>
+        <p>The Oak Brook Park District Foundation is dedicated to enhancing the quality of life in our community through support of parks, recreation facilities, and programs.</p>
+        <p>Through generous donations and community partnerships, we fund capital improvements, provide scholarships, and create inclusive spaces for all residents to enjoy.</p>
+        <a href="/page/about" class="btn">Learn More About Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Impact Stats -->
+<section class="section" style="background-color: var(--background-alt);">
+  <div class="container">
+    <h2 class="section-title">Our Impact</h2>
+    <div class="impact-stats">
+      <div class="stat-card">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Acres Protected</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">$500K+</div>
+        <div class="stat-label">Funds Raised</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">25+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">1000+</div>
+        <div class="stat-label">Lives Impacted</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Latest News -->
+<section class="home-news">
+  <div class="container">
+    <h2 class="section-title">Foundation News</h2>
+    <div class="news-grid">
+      <% @news_articles.each do |article| %>
+        <div class="card">
+          <% if article.image_url %>
+            <img src="<%= article.image_url %>" alt="<%= article.title %>" class="card-image" onerror="this.style.backgroundColor='#e0e0e0';">
+          <% else %>
+            <div class="card-image" style="background-color: #e0e0e0;"></div>
+          <% end %>
+          <div class="card-content">
+            <h3 class="card-title"><%= article.title %></h3>
+            <p class="news-meta"><%= article.published_at.strftime('%B %d, %Y') %></p>
+            <div class="news-excerpt">
+              <%= article.content[0..150] %>...
+            </div>
+            <a href="/news/<%= article.id %>" class="btn">Read More</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/news" class="btn btn-secondary">View All News</a>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section">
+  <div class="container" style="text-align: center;">
+    <h2 class="section-title">Get Involved</h2>
+    <p style="max-width: 600px; margin: 0 auto 2rem;">Your support helps us create and maintain beautiful parks, provide scholarships, and enhance recreational opportunities for everyone in our community.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="/page/ways-to-give-back" class="btn btn-donate">Donate Now</a>
+      <a href="/contact" class="btn btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</section>

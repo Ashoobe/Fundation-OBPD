@@ -1,0 +1,27 @@
+<!-- News Listing Page -->
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Foundation News</h1>
+    
+    <div class="news-list">
+      <% @news_articles.each do |article| %>
+        <article class="news-item">
+          <% if article.image_url %>
+            <img src="<%= article.image_url %>" alt="<%= article.title %>" class="news-image" onerror="this.style.backgroundColor='#e0e0e0';">
+          <% else %>
+            <div class="news-image" style="background-color: #e0e0e0;"></div>
+          <% end %>
+          
+          <div class="news-content">
+            <h2 class="news-title"><%= article.title %></h2>
+            <p class="news-meta">Published on <%= article.published_at.strftime('%B %d, %Y') %></p>
+            <div class="news-excerpt">
+              <%= article.content[0..200] %>...
+            </div>
+            <a href="/news/<%= article.id %>" class="read-more">Read full article →</a>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</section>

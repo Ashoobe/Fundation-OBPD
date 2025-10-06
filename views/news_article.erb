@@ -1,0 +1,21 @@
+<!-- News Article Detail Page -->
+<section class="section">
+  <div class="container">
+    <article>
+      <div class="article-header">
+        <h1 class="article-title"><%= @article.title %></h1>
+        <p class="news-meta">Published on <%= @article.published_at.strftime('%B %d, %Y') %></p>
+      </div>
+      
+      <% if @article.image_url %>
+        <img src="<%= @article.image_url %>" alt="<%= @article.title %>" class="article-image" onerror="this.style.backgroundColor='#e0e0e0';">
+      <% end %>
+      
+      <div class="article-content">
+        <%= @article.content %>
+      </div>
+      
+      <a href="/news" class="back-link">← Back to News</a>
+    </article>
+  </div>
+</section>

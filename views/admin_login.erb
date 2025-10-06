@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - Oak Brook Park District Foundation</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="/css/global/reset.css">
+  <link rel="stylesheet" href="/css/global/variables.css">
+  <link rel="stylesheet" href="/css/global/components.css">
+  <link rel="stylesheet" href="/css/pages/admin.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1 class="login-title">Admin Login</h1>
+      
+      <% if @error %>
+        <div class="alert alert-error">
+          <%= @error %>
+        </div>
+      <% end %>
+
+      <form method="POST" action="/admin/login">
+        <div class="form-group">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" id="username" name="username" class="form-input" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" name="password" class="form-input" required>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%;">Login</button>
+      </form>
+
+      <p style="text-align: center; margin-top: 1rem; color: var(--text-light); font-size: 0.875rem;">
+        Default credentials: admin / admin123
+      </p>
+    </div>
+  </div>
+</body>
+</html>
