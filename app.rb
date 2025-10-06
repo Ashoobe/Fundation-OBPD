@@ -7,6 +7,9 @@ require "bcrypt"
 # Database configuration
 set :database_file, "./config/database.yml"
 
+# Set port to 3000
+set :port, 3000
+
 # Enable sessions for authentication
 enable :sessions
 set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
@@ -94,9 +97,7 @@ end
 
 # Admin routes
 get "/admin/login" do
-  if logged_in?
-    redirect "/admin"
-  end
+  # Always show login form, no redirects to avoid confusion
   erb :admin_login, layout: false
 end
 

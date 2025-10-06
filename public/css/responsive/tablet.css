@@ -7,12 +7,16 @@
   
   /* Navigation */
   nav ul {
-    gap: var(--spacing-sm);
+    gap: 0.5rem;
   }
   
   nav a {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+  }
+  
+  .site-logo {
+    font-size: 1.2rem;
   }
   
   /* Grid System */

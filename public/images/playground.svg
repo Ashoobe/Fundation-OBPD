@@ -1,0 +1,5 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#97BC62"/>
+  <text x="200" y="85" text-anchor="middle" fill="white" font-family="Arial" font-size="22" font-weight="bold">Universal</text>
+  <text x="200" y="115" text-anchor="middle" fill="white" font-family="Arial" font-size="22" font-weight="bold">Playground</text>
+</svg>

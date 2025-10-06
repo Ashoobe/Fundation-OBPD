@@ -1,0 +1,5 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#F5C842"/>
+  <text x="200" y="85" text-anchor="middle" fill="#2C5F2D" font-family="Arial" font-size="24" font-weight="bold">Fundraising</text>
+  <text x="200" y="115" text-anchor="middle" fill="#2C5F2D" font-family="Arial" font-size="24" font-weight="bold">Gala</text>
+</svg>
